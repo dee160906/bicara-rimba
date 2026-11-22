@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#168c85">
+  <meta name="description" content="Permainan perbualan Bahasa Melayu untuk penjelajah cilik berumur 4 hingga 5 tahun.">
+  <title>Bicara Rimba – Jom Berbual dengan Haiwan</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/dialogue.js"></script>
+  <script defer src="js/game.js"></script>
+  <script defer src="js/speech.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#mula" aria-label="Bicara Rimba, ke halaman mula"><span class="brand-icon">🌿</span><span>Bicara <b>Rimba</b><small>Jom berbual dengan haiwan!</small></span></a>
+    <div class="top-actions"><span class="score-pill" aria-label="Jumlah bintang">⭐ <b id="star-count">0</b></span><button class="button button-small button-light" id="teacher-open">🧑‍🏫 Mod Guru</button></div>
+  </header>
+  <main>
+    <section class="intro" id="mula"><div><p class="eyebrow">🌈 Misi hari ini</p><h1>Jom berbual,<br><span>Penjelajah Cilik!</span></h1><p>Pilih habitat, temui haiwan dan berbual bersama mereka. Dengar baik-baik dan jawab dengan suara kamu!</p><div class="intro-note">🎙️ Tiada rakaman suara disimpan. Suara hanya diproses oleh pelayar.</div></div><div class="hero-art" aria-hidden="true"><span class="hero-sun">☀️</span><span class="hero-animal">🐯</span><span class="hero-leaf leaf-one">🍃</span><span class="hero-leaf leaf-two">🌼</span></div></section>
+    <section class="section-block" aria-labelledby="habitat-title"><div class="section-heading"><div><p class="eyebrow">Pilih tempat meneroka</p><h2 id="habitat-title">Ke mana kita nak pergi?</h2></div><span class="progress-label" id="overall-progress">0 daripada 4 habitat diteroka</span></div><div class="habitat-grid" id="habitat-list"></div></section>
+    <section class="section-block animal-section" id="animal-section" hidden><div class="section-heading"><div><p class="eyebrow" id="animal-eyebrow">Habitat</p><h2 id="animal-title">Pilih kawan haiwan</h2></div><button class="button button-light" id="back-habitats">← Semua habitat</button></div><div class="animal-grid" id="animal-list"></div></section>
+    <section class="section-block play-section" id="play-section" hidden aria-live="polite"></section>
+    <section class="trophy-strip" id="trophy-strip"><span class="trophy-icon">🏆</span><div><b>Trofi Penjelajah Cilik</b><p>Teroka semua habitat untuk mengumpul lencana!</p></div><span class="trophy-count" id="badge-count">0/4</span></section>
+  </main>
+  <footer>Direka dengan kasih sayang untuk belajar, mendengar dan berbual. 💚</footer>
+  <dialog id="teacher-dialog" class="teacher-dialog"><div class="dialog-head"><div><p class="eyebrow">Catatan perkembangan</p><h2>📋 Laporan Pemerhatian</h2></div><button class="icon-button" id="teacher-close" aria-label="Tutup laporan">✕</button></div><p class="teacher-help">Guru boleh memilih tahap pencapaian berdasarkan pemerhatian semasa aktiviti.</p><div class="report-meta"><label>Nama kanak-kanak <input id="child-name" type="text" placeholder="Contoh: Aisyah"></label><label>Tarikh <input id="report-date" type="date"></label></div><div class="report-table-wrap"><table><thead><tr><th>Kemahiran</th><th>Tahap pencapaian</th></tr></thead><tbody id="report-rows"></tbody></table></div><label class="notes-label">Catatan guru<textarea id="teacher-notes" rows="3" placeholder="Catatan ringkas..."></textarea></label><div class="teacher-actions"><button class="button button-light" id="reset-progress">Padam kemajuan permainan</button><button class="button button-primary" id="print-report">🖨️ Cetak laporan</button></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
